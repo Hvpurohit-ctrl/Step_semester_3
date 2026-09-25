@@ -1,0 +1,30 @@
+public class Question2 {
+    private final String[] songs;
+    private int count;
+
+    public Question2(int maxSongs) {
+        songs = new String[maxSongs];
+        count = 0;
+    }
+
+    public void addSong(String song) {
+        if (count < songs.length) {
+            songs[count] = song;
+            count++;
+        }
+    }
+
+    public String[] getSongs() {
+        String[] copy = new String[count];
+
+        for (int i = 0; i < count; i++) {
+            copy[i] = songs[i];
+        }
+
+        return copy;
+    }
+
+    public int getSongCount() {
+        return count;
+    }
+}
